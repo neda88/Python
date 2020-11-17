@@ -35,8 +35,8 @@ class Teacher(Person):
 x = Student("Mike", "Olsen", 1258)
 x.printname()
 print(x.getSid())
-teacher1 = Teacher("N", "P", 12345, [])
+teacher1 = Teacher("Nina", "Li", 12345, [])
 teacher1.show()
-teacher2 = Teacher("A", "Meh", 12345, ["Nah", "Z"])
+teacher2 = Teacher("Eli", "Johnson", 12345, ["Christina", "Ray"])
 teacher2.show()
 
