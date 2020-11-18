@@ -1,20 +1,20 @@
 class Person:
-    def __init__(self, status, fname, lname,ID):
+    def __init__(self, status, fname, lname,Id):
         self.status=status
         self.firstname = fname
         self.lastname = lname
-        self.ID=ID
+        self.Id=Id
     
     def display(self):
         print("Person Details:")
         print("  Status= {}".format(self.status))
         print("  Name= {} {}".format(self.firstname, self.lastname))
-        print("  ID= {}".format(self.ID))
+        print("  ID= {}".format(self.Id))
         
 
 class Student(Person):
-    def __init__(self, status, fname, lname,ID, graduationYear):
-        super().__init__(status, fname,lname,ID)
+    def __init__(self, status, fname, lname,Id, graduationYear):
+        super().__init__(status, fname,lname,Id)
         self.graduationYear = graduationYear
 
 
@@ -25,8 +25,8 @@ class Student(Person):
 
 
 class Teacher(Person):
-    def __init__(self, status, fname, lname, ID, course, studentList=None):
-        super().__init__(status, fname, lname,ID)
+    def __init__(self, status, fname, lname, Id, course, studentList=None):
+        super().__init__(status, fname, lname,Id)
         self.course =course
         if studentList == None:
             self.studentList = []
