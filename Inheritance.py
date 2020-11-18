@@ -46,6 +46,7 @@ class Teacher(Person):
 
         
         if len(self.studentList) == 0:
+            self.studentList=stu
             print("The student {} does not exist.".format(self.studentList))
             
         else:
@@ -67,6 +68,6 @@ teacher1.display()
 teacher2 = Teacher("Teacher", "Sarah", "Hamilton", 621,"History", ["Jojo", "Coco"])
 teacher2.removeStudent("Coco")
 teacher2.display()
-teacher3= Teacher("Teacher", "David", "Gilbo", 876, "Science", "")
+teacher3= Teacher("Teacher", "David", "Gilbo", 876, "Science", [])
 teacher3.display()
-teacher3.removeStudent('')
+teacher3.removeStudent("Ray")
