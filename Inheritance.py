@@ -46,7 +46,7 @@ class Teacher(Person):
 
         
         if len(self.studentList) == 0:
-            self.studentList=stu
+            
             print("The student {} does not exist.".format(stu))
             
         else:
