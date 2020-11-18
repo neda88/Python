@@ -1,69 +1,72 @@
-class Property():
-    def __init__(self ,Sq='' , beds='', baths='' ):
-        self.square_feet=Sq
-        self.beds=beds
-        self.baths=baths
-
-
+class Person:
+    def __init__(self, status, fname, lname,ID):
+        self.status=status
+        self.firstname = fname
+        self.lastname = lname
+        self.ID=ID
+    
     def display(self):
-        print("Property details:")
-        print("=====================")
-        print("square footage: {}".format(self.square_feet))
-        print("No. of bedrooms:{}".format(self.beds))
-        print("No. of bathrooms:",self.baths)
-
-
-class Apartment(Property):
-    def __init__(self,Sq,beds,baths, balacony ,laundary ):
-        super().__init__(Sq,beds,baths)
-        self.balacony=balacony
-        self.laundary=laundary
-
-    def display(self):
-        super().display()
-        print("Apartment details:")
-        print("=====================")
-        print("Balacony: ",self.balacony )
-        print("laundary type:", self.laundary)
+        print("Person Details:")
+        print("  Status= {}".format(self.status))
+        print("  Name= {} {}".format(self.firstname, self.lastname))
+        print("  ID= {}".format(self.ID))
         
 
-class House(Property):
-    def __init__(self, Sq, beds,baths, garage, fence):
-        super(). __init__(Sq, beds, baths)
-        self.garage=garage
-        self.fence=fence
+class Student(Person):
+    def __init__(self, status, fname, lname,ID, graduationYear):
+        super().__init__(status, fname,lname,ID)
+        self.graduationYear = graduationYear
+
 
     def display(self):
         super().display()
-        print("House details:")
-        print("=====================")
-        print("garage: ",self.garage )
-        print("fence: ", self.fence)
+        print("  Graduation Year is: {}".format(self.graduationYear))
+        print("==================")
 
-    def updateGarage(self, garagetype):
-        self.garage=garagetype
 
+class Teacher(Person):
+    def __init__(self, status, fname, lname, ID, course, studentList=None):
+        super().__init__(status, fname, lname,ID)
+        self.course =course
+        if studentList == None:
+            self.studentList = []
+        else:
+            self.studentList =[]
+            for stu in studentList:
+                self.studentList.append(stu)
+
+
+
+
+
+    def addStudent(self,stu):
+        self.studentList.append(stu)
+
+    def removeStudent(self,stu):
+
+        
+        if len(self.studentList) == 0:
+            print("The student {} does not exist.".format(self.studentList))
             
-            
+        else:
+            self.studentList.remove(stu)
+        
+
+    def display(self):
+        super().display()
+        print("  Course= {}".format(self.course))
+        print("  Student List ------>" , self.studentList)
+        print("==================")
 
 
-
-
-
-
-
-
-    
-if __name__ == '__main__':
-    prop1=Property(1000, 2, 2.5)
-    prop1.display()
-    print()
-    apt1=Apartment (2000, 3, 3.5, "yes", "coin")
-    apt1.display()
-    print()
-    house1=House(3000, 4, 4.5, "no", "electric_fence")
-    house1.display()
-    print()
-    house1.updateGarage("two Door")
-    house1.display()
-    print()
+student1 = Student("Student", "Mike", "Olsen", 125, 1999)
+student1.display()
+teacher1 = Teacher("Teacher", "John", "Li", 321, "Math", [])
+teacher1.addStudent("Julia")
+teacher1.display()
+teacher2 = Teacher("Teacher", "Sarah", "Hamilton", 621,"History", ["Jojo", "Coco"])
+teacher2.removeStudent("Coco")
+teacher2.display()
+teacher3= Teacher("Teacher", "David", "Gilbo", 876, "Science", "")
+teacher3.display()
+teacher3.removeStudent('')
