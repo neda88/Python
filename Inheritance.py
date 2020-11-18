@@ -35,15 +35,10 @@ class Teacher(Person):
             for stu in studentList:
                 self.studentList.append(stu)
 
-
-
-
-
     def addStudent(self,stu):
         self.studentList.append(stu)
 
     def removeStudent(self,stu):
-
         
         if len(self.studentList) == 0:
             
@@ -51,7 +46,6 @@ class Teacher(Person):
             
         else:
             self.studentList.remove(stu)
-        
 
     def display(self):
         super().display()
