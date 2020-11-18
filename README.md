@@ -1,15 +1,15 @@
 # Python
 
-This page provides results of inheritance.py file.
+## This page provides results of inheritance.py file.
 
 
 
-Person Details:
-  Status= Student
-  Name= Mike Olsen
-  ID= 125
-  Graduation Year is: 1999
-==================
+###### Person Details:
+  ###### Status= Student
+  ###### Name= Mike Olsen
+  ###### ID= 125
+  ###### Graduation Year is: 1999
+###### ==================
 Person Details:
   Status= Teacher
   Name= John Li
