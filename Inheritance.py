@@ -10,13 +10,12 @@ class Person:
         print("  Status= {}".format(self.status))
         print("  Name= {} {}".format(self.firstname, self.lastname))
         print("  ID= {}".format(self.Id))
-        
+
 
 class Student(Person):
     def __init__(self, status, fname, lname,Id, graduationYear):
         super().__init__(status, fname,lname,Id)
         self.graduationYear = graduationYear
-
 
     def display(self):
         super().display()
@@ -39,11 +38,8 @@ class Teacher(Person):
         self.studentList.append(stu)
 
     def removeStudent(self,stu):
-        
         if len(self.studentList) == 0:
-            
             print("The student {} does not exist.".format(stu))
-            
         else:
             self.studentList.remove(stu)
 
@@ -52,7 +48,6 @@ class Teacher(Person):
         print("  Course= {}".format(self.course))
         print("  Student List ------>" , self.studentList)
         print("==================")
-
 
 student1 = Student("Student", "Mike", "Olsen", 125, 1999)
 student1.display()
