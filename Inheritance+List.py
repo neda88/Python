@@ -22,11 +22,6 @@ class Student(Person):
         super().display()
         print("  Graduation Year is: {}".format(self.graduationYear))
         print("==================")
-    
-
-
-  
-
 
 
 class Teacher(Person):
