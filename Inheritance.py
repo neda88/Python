@@ -50,8 +50,10 @@ class Teacher(Person):
         print("==================")
 
 student1 = Student("Student", "Mike", "Olsen", 125, 1999)
+
 student1.display()
 teacher1 = Teacher("Teacher", "John", "Li", 321, "Math", [])
+print (teacher1)
 teacher1.addStudent("Julia")
 teacher1.display()
 teacher2 = Teacher("Teacher", "Sarah", "Hamilton", 621,"History", ["Jojo", "Coco"])
