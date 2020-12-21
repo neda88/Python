@@ -3,7 +3,7 @@ import random
 Upperbound = int(input("Please enter a positive integer number for Upper Bound : "))
 Lowerbound = int(input("Please enter a positive integer number for Lower Bound : "))
 while Lowerbound >= Upperbound:
-    print("Wronge!!")
+    print("Invalid Answer!")
     Lowerbound = int(input("Please enter a positive integer number for Lower Bound : "))
 number = random.randint(Lowerbound, Upperbound)
 guess = int(input("Please guess number between Upper Bound and Lower Bound : "))
